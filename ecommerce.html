@@ -8,8 +8,9 @@
    
 </head>
 <body>
+    <!-- no element with id="main-inventory"-->
 
-    <a href="#main-inventory" class="skip-link">Skip to Inventory</a>
+    <a href="#catalog" class="skip-link">Skip to Inventory</a>
 
     <header>
         <div class="logo" onclick="location.reload()">VOGUE & VALOR</div>
@@ -85,7 +86,9 @@
             <div style="border-top: 1px solid #eee; padding: 20px 0;">
                 <p style="color: var(--muted);">Your bag is currently empty.</p>
                 <p>Express Checkout:</p>
-                <input type="text" placeholder="Gift Card or Promo Code">
+                <!-- missing form label -->
+                 <label for="promo-code">Gift. card or Promo Code</label>
+                <input type="text" id="promo-code" placeholder="Gift Card or Promo Code">
             </div>
             <button class="btn-black" onclick="cls()">Proceed to Secure Pay</button>
         </div>
@@ -96,10 +99,11 @@
             <span class="close-trigger" onclick="cls()">✕</span>
             <h3>Fit Consultant</h3>
             <div style="margin: 20px 0;">
-                <label for="usr-h">Your Height (cm)</label>
-                <input type="text" id="usr-h" placeholder="180">
-                <label for="usr-h">Your Weight (kg)</label>
-                <input type="text" id="usr-h" placeholder="75">
+                <!-- both input label use same user-h-->
+                <label for="usr-height">Your Height (cm)</label>
+                <input type="text" id="usr-height" placeholder="180">
+                <label for="usr-weight">Your Weight (kg)</label>
+                <input type="text" id="usr-weight" placeholder="75">
             </div>
             <button class="btn-black" onclick="cls()">Calculate My Fit</button>
         </div>
@@ -110,8 +114,11 @@
             <span class="close-trigger" onclick="cls()">✕</span>
             <h3>Client Login</h3>
             <div style="margin-bottom: 1rem;">
+                <!-- mising form label-->
+                 <label>
                 <input type="checkbox" style="width: auto;">
                 <span>Remember this device</span>
+                 </label>
             </div>
             <p style="color: var(--accent); font-size: 0.8rem; text-align: center;">Identity Server Status: Ready</p>
             <button class="btn-black" onclick="cls()">Sign In</button>
