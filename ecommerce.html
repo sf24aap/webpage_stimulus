@@ -13,23 +13,23 @@
     <a href="#catalog" class="skip-link">Skip to Inventory</a>
 
     <header>
-        <div class="logo" onclick="location.reload()">VOGUE & VALOR</div>
+        <button class="logo" onclick="location.reload()">VOGUE & VALOR</button> <!--Replace dic with <button>-->
         <div class="nav-links">
-            <div class="nav-item" onclick="openMod('cart')">Bag (0)</div>
-            <div class="nav-item" onclick="openMod('size')">Size Guide</div>
-            <div class="nav-item" onclick="openMod('auth')">Account</div>
+            <button class="nav-item" onclick="openMod('cart')">Bag (0)</button> <!--Replace dic with <button>-->
+            <button class="nav-item" onclick="openMod('size')">Size Guide</button> <!--Replace dic with <button>-->
+            <button class="nav-item" onclick="openMod('auth')">Account</button> <!--Replace dic with <button>-->
         </div>
     </header>
 
     <section class="hero">
         <div>
-            <h3>The Equinox Collection</h3>
+            <h1>The Equinox Collection</h1> <!-- replace h3 with h1-->
             <p>Timeless silhouettes crafted from sustainably sourced Italian silk. Discover the intersection of comfort and high-fashion utility.</p>
             <button class="btn-black" style="width: auto;" onclick="document.getElementById('catalog').scrollIntoView()">Shop Collection</button>
         </div>
     </section>
 
-    <h4 class="section-title">Featured Curations</h4>
+    <h2 class="section-title">Featured Curations</h2> <!-- replace h4 to h2-->
     
     <div class="grid" id="catalog">
         <div class="product-card">
@@ -48,11 +48,14 @@
             </div>
         </div>
         <div class="product-card">
-            <button 
-    aria-label="Request custom order"
-    style="width:100%; height:400px; background:#f9f9f9; border:none; cursor:pointer;"
+            <button style="width:100%; height:400px; background:#f9f9f9; border:none; cursor:pointer;"
 >
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#a1a1aa"><path d="M12 5v14M5 12h14"/></svg>
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#a1a1aa">
+                    <path d="M12 5v14M5 12h14"></path>
+
+                </svg>
+
+                <div>Request Custom Order</div>
             </button>
             <div class="product-info">
                 <span>Request Custom Order</span>
@@ -62,16 +65,16 @@
 
     <footer class="footer">
         <div>
-            <h5>Boutique Info</h5>
+            <h3>Boutique Info</h3>
             <p>1244 Madison Ave, New York<br>Monday - Friday: 10am - 7pm</p>
         </div>
         <div>
-            <h5>Support</h5>
-            <p>For return policies, <a href="#" style="color: var(--accent);">click here</a>.</p>
-            <p>For shipping updates, <a href="#" style="color: var(--accent);">read more</a>.</p>
+            <h3>Support</h3>
+            <p>For return policies, <a href="#" style="color: var(--accent);">View return Policy</a>.</p> <!--change clik herre to view return policy-->
+            <p>For shipping updates, <a href="#" style="color: var(--accent);">View Shopping Updates</a>.</p> <!-- change read more to view shopping updates-->
         </div>
         <div>
-            <h5>Newsletter</h5>
+            <h3>Newsletter</h3>
             <div class="ghost-coupon">
                 <p style="color: var(--accent); margin: 0;">SECRET_CODE: VOGUE2026</p>
                 <button style="font-size: 0.6rem; padding: 5px;">Copy</button>
@@ -81,7 +84,7 @@
 
     <div id="mod-cart" class="modal-overlay">
         <div class="modal-box">
-            <span class="close-trigger" onclick="cls()">✕</span>
+            <button class="close-trigger" onclick="cls()">✕</button> <!-- replace span with button-->
             <h3>Your Selection</h3>
             <div style="border-top: 1px solid #eee; padding: 20px 0;">
                 <p style="color: var(--muted);">Your bag is currently empty.</p>
@@ -90,13 +93,13 @@
                  <label for="promo-code">Gift. card or Promo Code</label>
                 <input type="text" id="promo-code" placeholder="Gift Card or Promo Code">
             </div>
-            <button class="btn-black" onclick="cls()">Proceed to Secure Pay</button>
+            <button class="btn-black" id="checkout-btn">Proceed to Secure Pay</button>
         </div>
     </div>
 
     <div id="mod-size" class="modal-overlay">
         <div class="modal-box">
-            <span class="close-trigger" onclick="cls()">✕</span>
+            <button class="close-trigger" onclick="cls()">✕</button>
             <h3>Fit Consultant</h3>
             <div style="margin: 20px 0;">
                 <!-- both input label use same user-h-->
@@ -111,7 +114,7 @@
 
     <div id="mod-auth" class="modal-overlay">
         <div class="modal-box">
-            <span class="close-trigger" onclick="cls()">✕</span>
+            <button class="close-trigger" onclick="cls()">✕</button> <!-- change span to button -->
             <h3>Client Login</h3>
             <div style="margin-bottom: 1rem;">
                 <!-- mising form label-->
